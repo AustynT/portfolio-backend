@@ -17,6 +17,5 @@ job_history_skills = Table(
         ForeignKey("skills.id"),
         primary_key=True,
         doc="Foreign key linking to the Skill model."
-    ),
-    doc="Association table linking JobHistory to Skill."
+    )
 )
