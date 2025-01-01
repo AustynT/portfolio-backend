@@ -59,12 +59,6 @@ class User(BaseModel):
         doc="Relationship to the Token model, representing the user's tokens."
     )
 
-    role_permissions = relationship(
-        "RolePermission",
-        back_populates="user",
-        doc="Relationship to the RolePermission model, representing the user's permissions."
-    )
-
     job_histories = relationship(
         "JobHistory",
         back_populates="user",
@@ -141,5 +135,3 @@ class User(BaseModel):
         return value
 
 
-"""     services = relationship("Service", back_populates="user")
-    prodocts = relationship("Product", back_populates="product") """

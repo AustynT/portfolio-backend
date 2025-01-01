@@ -3,7 +3,16 @@ import os
 from logging.config import fileConfig
 from alembic import context
 from app.db.database import Base  # Import your Base metadata
-from app.models import user # Import your models
+from app.models import (
+    User,
+    Token,
+    JobHistory,
+    Project,
+    Skill,
+    job_history_skills,
+    project_skills,
+)  # Import all models Import your models
+
 from dotenv import load_dotenv
 
 # Add the alembic folder to the Python path
